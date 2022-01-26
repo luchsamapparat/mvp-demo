@@ -1,0 +1,22 @@
+<ng-container *ngIf="flows">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let flow of flows.rows">
+        <td>{{ flow.id }}</td>
+        <td>{{ flow.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li
+      *ngFor="let page of pages; let pageId = index"
+      (click)="pageChange.emit(pageId)">{{ pageId }}</li>
+  </ul>
+</ng-container>

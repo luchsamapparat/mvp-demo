@@ -1,0 +1,15 @@
+<form [id]="formId" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label>
+    Name
+    <div>
+      <input type="text" formControlName="name" />
+    </div>
+  </label>
+
+  <label>
+    Details
+    <div>
+      <textarea formControlName="details"></textarea>
+    </div>
+  </label>
+</form>
